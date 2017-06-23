@@ -22,7 +22,7 @@
     -w, --word=VALUE           (DUC 2001, 2002 ROUGE settings).
     -h, --help                 Show this message and exit.
   
-3. Test existing model.
+4. Test existing model.
   For example, test DUC 2004 model: LibSum.exe -l PATH\root\model\SRSum\SRSum.2004.model PATH\root\data\duc2004.test.txt
   The console outputs:
   Intel MKL (x64; revision 11; MKL 2017.0)
@@ -33,7 +33,6 @@
   [Read] xxxxxxxxxxxxxxx\root\data\duc2004.test.txt 13300
   Corpus Count: 50
   ..................................................
-  [LOG]: DELETE FOLDER ..\root\model\SRSum\rouge-summary__test
   C:\Perl\bin\perl.exe ..\root\Rouge\RELEASE-1.5.5\ROUGE-1.5.5.pl -b 665  -e ..\root\Rouge\RELEASE-1.5.5\data -n 2 -m -2 4 -u -c 95 -x -r 1000 -f A -p 0.5 -t 0 -a -d "..\root\model\SRSum\rouge-summary__test\rouge_config.xml"
 
   ROURGE_1_R      0.39285
@@ -46,6 +45,6 @@
   ROURGE_SU4_P    0.14639
   ROURGE_SU4_F    0.14723
   
-4. Train new model.
+5. Train new model.
   For example, train DUC 2004 model: LibSum.exe -q false -c 4 -i 100 -t 0.5 -b 665 PATH\root\data\duc2004.train.txt PATH\root\data\duc2004.test.txt
   For example, train DUC 2007 model: LibSum.exe -q true -c 4 -i 100 -t 0.5 -w 250 PATH\root\data\duc2007.train.txt PATH\root\data\duc2007.test.txt
